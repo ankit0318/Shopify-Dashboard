@@ -18,8 +18,8 @@ function SideBar() {
           className="flex items-center h-10 mt-1  text-gray-900 dark:text-white"
         >
         <div className="flex items-center gap-3 ">
-        <img src="./public/shopping-trolley.png" alt="logo" className="w-10 h-10" />
-        <img src="./public/image.png" alt="logo" className="w-20 h-20" />
+        <img src="./shopping-trolley.png" alt="logo" className="w-10 h-10" />
+        <img src="./image.png" alt="logo" className="w-20 h-20" />
         </div>
         
         </NavLink>
