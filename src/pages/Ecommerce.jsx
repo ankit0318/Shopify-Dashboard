@@ -29,14 +29,20 @@ const Ecommerce = () => {
       className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-[auto_1fr_1fr_1fr_1fr] px-9 gap-3 
     "
     >
-      {/* First grid item/ first line */}
-      <div className={`rounded-lg md:w-80 shadow-md p-4 flex flex-col justify-between pt-7 bg-welcome-bg bg-cover bg-no-repeat bg-bottom bg-white dark:bg-secondary-dark-bg`}
-        style={{ backgroundPosition: `calc(50% - 20px) bottom` }}
+     
+      <div
+        className={`rounded-lg md:w-80 shadow-md p-4 flex flex-col justify-between pt-7 bg-cover bg-no-repeat bg-bottom bg-white dark:bg-secondary-dark-bg`}
+        style={{
+          backgroundImage: `url('/welcome-bg.svg')`,
+          backgroundPosition: `calc(50% - 20px) bottom`,
+        }}
       >
         <div className={`flex justify-between items-center`}>
           <div className="flex flex-col">
             <p className="text-slate-500 dark:text-slate-400">Earnings</p>
-            <p className="font-normal text-lg text-gray-800 dark:text-gray-100">$63,488.56</p>
+            <p className="font-normal text-lg text-gray-800 dark:text-gray-100">
+              $63,488.56
+            </p>
           </div>
           <div className="pr-4">
             <Button
