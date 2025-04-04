@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="./screenshots/dashboard-preview.png" alt="Dashboard Preview" width="100%"/>
+ <a href="https://shopify021.netlify.app/">Dashboard Preview<a/>
 </p>
 
 > A modern, fully responsive admin dashboard application built with React, featuring light/dark mode, multiple charts, data tables, kanban board, rich text editor and more!
