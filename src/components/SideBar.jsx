@@ -15,11 +15,11 @@ function SideBar() {
       <div className="flex flex-row justify-between pr-3 items-center mb-4 gap-3 font-extrabold text-xl text-slate-900 tracking-tight dark:text-white">
         <NavLink
           to="/"
-          className="flex items-center h-10 mt-4  text-gray-900 dark:text-white"
+          className="flex items-center h-10 mt-1  text-gray-900 dark:text-white"
         >
         <div className="flex items-center gap-3 ">
-        <img src="/public/shopping-trolley.png" alt="logo" className="w-10 h-10" />
-        <img src="src/assets/image.png" alt="logo" className="w-20 h-20" />
+        <img src="public/shopping-trolley.png" alt="logo" className="w-10 h-10" />
+        <img src="public/image.png" alt="logo" className="w-20 h-20" />
         </div>
         
         </NavLink>
