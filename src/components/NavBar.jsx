@@ -13,6 +13,7 @@ import avatar from "../data/avatar.jpg";
 import React, { useEffect } from "react";
 import { Avatar, Tooltip } from "@mui/material";
 import { useStateContext } from "../contexts/Context.jsx";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 const NavButton = ({ title, handleAction, icon }) => {
   return (
@@ -26,7 +27,7 @@ const NavButton = ({ title, handleAction, icon }) => {
   >
     <button
       onClick={handleAction} // Pass the function reference directly
-      className="text-xl rounded-full p-3 hover:bg-light-gray"
+      className="text-xl rounded-full p-3 hover:bg-light-gray dark:hover:bg-transparent"
       type="button"
     >
       {icon}
@@ -36,7 +37,7 @@ const NavButton = ({ title, handleAction, icon }) => {
 };
 
 const NavBar = () => {
-  const { activeMenu, setActiveMenu, isClicked, handleClick,screenSizeRef } = useStateContext();
+  const { activeMenu, setActiveMenu, setCurrentMode,currentMode,isClicked, handleClick,screenSizeRef } = useStateContext();
 
   useEffect(() => {
     const handleResize = () => {
@@ -61,6 +62,7 @@ const NavBar = () => {
   return (
     <div className="flex justify-between items-center p-2 relative h-20">
       <div className="flex items-center">
+     
         <NavButton
           title={"menu"}
           handleAction={()=>setActiveMenu((prev) => !prev)}
@@ -73,6 +75,16 @@ const NavBar = () => {
         />
       </div>
       <div className="flex items-center gap-2">
+      {currentMode=='Light' ?  <NavButton
+          title={"Light Mode"}
+          handleAction={()=>{localStorage.setItem('themeMode',"Dark");setCurrentMode('Dark')}}
+          icon={<FaSun className="text-yellow-400" />}
+        />
+         :<NavButton
+          title={"Dark Mode"}
+          handleAction={()=>{localStorage.setItem('themeMode',"Light");setCurrentMode('Light')}}
+          icon={<FaMoon className="text-white " />}
+        /> }
         <NavButton
           title={"cart"}
           handleAction={() => handleClick("cart")}
