@@ -14,30 +14,44 @@ import React, { useEffect } from "react";
 import { Avatar, Tooltip } from "@mui/material";
 import { useStateContext } from "../contexts/Context.jsx";
 import { FaMoon, FaSun } from "react-icons/fa";
+import UserMenu from "./UserMenu.jsx";
+// import Notification from "./Notification.jsx";
+import NotificationDropdown from "./Notification.jsx";
+import CartDropDown from "./Cart.jsx";
+import ChatDropdown from "./chat.jsx";
+import SearchBar from "./SearchBar.jsx";
 
 const NavButton = ({ title, handleAction, icon }) => {
   return (
-    <Tooltip 
-    title={title} 
-    placement="bottom" 
-    arrow
-    enterDelay={1200} // Add a small delay before showing tooltip
-    leaveDelay={100} // Small delay when leaving
-    disableInteractive={true} // Disable hover interactivity
-  >
-    <button
-      onClick={handleAction} // Pass the function reference directly
-      className="text-xl rounded-full p-3 hover:bg-light-gray dark:hover:bg-transparent"
-      type="button"
+    <Tooltip
+      title={title}
+      placement="bottom"
+      arrow
+      enterDelay={1200} // Add a small delay before showing tooltip
+      leaveDelay={100} // Small delay when leaving
+      disableInteractive={true} // Disable hover interactivity
     >
-      {icon}
-    </button>
-  </Tooltip>
+      <button
+        onClick={handleAction} // Pass the function reference directly
+      className="text-xl rounded-full p-3 hover:bg-light-gray dark:hover:bg-transparent"
+        type="button"
+      >
+        {icon}
+      </button>
+    </Tooltip>
   );
 };
 
 const NavBar = () => {
-  const { activeMenu, setActiveMenu, setCurrentMode,currentMode,isClicked, handleClick,screenSizeRef } = useStateContext();
+  const {
+    activeMenu,
+    setActiveMenu,
+    setCurrentMode,
+    currentMode,
+    isClicked,
+    handleClick,
+    screenSizeRef,
+  } = useStateContext();
 
   useEffect(() => {
     const handleResize = () => {
@@ -60,59 +74,48 @@ const NavBar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [setActiveMenu]); // Only depend on setActiveMenu
   return (
-    <div className="flex justify-between items-center p-2 relative h-20">
+    <div className="flex justify-between items-center p-2  h-20">
       <div className="flex items-center">
-     
         <NavButton
           title={"menu"}
-          handleAction={()=>setActiveMenu((prev) => !prev)}
+          handleAction={() => setActiveMenu((prev) => !prev)}
           icon={<AiOutlineMenu />}
         />
-        <NavButton
-          title={"search"}
-          handleAction={()=>setActiveMenu((prev) => !prev)}
-          icon={<AiOutlineSearch />}
-        />
+     <SearchBar/>
       </div>
       <div className="flex items-center gap-2">
-      {currentMode=='Light' ?  <NavButton
-          title={"Light Mode"}
-          handleAction={()=>{localStorage.setItem('themeMode',"Dark");setCurrentMode('Dark')}}
-          icon={<FaSun className="text-yellow-400" />}
-        />
-         :<NavButton
-          title={"Dark Mode"}
-          handleAction={()=>{localStorage.setItem('themeMode',"Light");setCurrentMode('Light')}}
-          icon={<FaMoon className="text-white " />}
-        /> }
-        <NavButton
-          title={"cart"}
-          handleAction={() => handleClick("cart")}
-          icon={<FiShoppingCart />}
-        />
-        <NavButton
-          title={"chat"}
-          handleAction={() => handleClick("chat")}
-          icon={<BsChatLeft />}
-        />
-        <NavButton
-          title={"notification"}
-          handleAction={() => handleClick("notification")}
-          icon={<RiNotification3Line />}
-        />
+        {currentMode == "Light" ? (
+          <NavButton
+            title={"Light Mode"}
+            handleAction={() => {
+              localStorage.setItem("themeMode", "Dark");
+              setCurrentMode("Dark");
+            }}
+            icon={<FaSun className="text-yellow-400" />}
+          />
+        ) : (
+          <NavButton
+            title={"Dark Mode"}
+            handleAction={() => {
+              localStorage.setItem("themeMode", "Light");
+              setCurrentMode("Light");
+            }}
+            icon={<FaMoon className="text-white " />}
+          />
+        )}
+       
+        <CartDropDown />
+        
+<ChatDropdown />     
+      <NotificationDropdown />
+   
 
         <Tooltip title="Profile" placement="bottom" arrow>
-          <div className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray dark:hover:bg-gray-700 rounded-lg" onClick={() => handleClick("userProfile")}>
-            <img
-              src={avatar}
-              alt="user-profile"
-              className="rounded-full w-6 h-6 "
-            />
-            <p className="text-gray-400 font-medium capitalize max-md:hidden">Hi, Ankit</p>
-            <MdKeyboardArrowDown className="text-gray-400" />
-          </div>
+         
+            <UserMenu />
+     
         </Tooltip>
-
+      
       </div>
     </div>
   );

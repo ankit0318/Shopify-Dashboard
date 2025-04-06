@@ -83,12 +83,12 @@ function App() {
             w-full text-gray-800 dark:text-gray-200 h-full
               ${activeMenu ? 'md:ml-64' : 'flex-2'}`}
           >
-            <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg  w-full ">
+            <div className="fixed md:static  bg-main-bg dark:bg-main-dark-bg  w-full ">
               <NavBar />
             </div>
             
             {/* Routes */}
-            <div className="w-full h-full md:mt-4 mt-20 ">
+            <div className="w-full h-full  mt-20 md:mt-4">
               <Routes>
                 {/* dashboard */}
                 <Route path="/" element={<Ecommerce />} />

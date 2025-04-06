@@ -39,7 +39,7 @@ function handleClick(name) {
 
 
 
-  return <StateContext.Provider value={{setMode,setColor,setCurrentMode,currentColor,themeSettings,setThemeSettings,activeMenu,currentMode, setCurrentMode,setActiveMenu,isClicked,handleClick,screenSizeRef}}>{children}</StateContext.Provider>;
+  return <StateContext.Provider value={{setMode,setColor,setCurrentMode,currentColor,themeSettings,setThemeSettings,activeMenu,currentMode,setActiveMenu,isClicked,handleClick,screenSizeRef}}>{children}</StateContext.Provider>;
 };
 
 // Fix the naming - should use StateContext not stateProvider
