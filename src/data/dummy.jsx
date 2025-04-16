@@ -21,9 +21,9 @@ import product4 from './product4.jpg';
 import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
-import product8 from './product8.jpg';
-import chatimage from './chatimage.png';
+import cardbg from './cardbg.png';
 
+import message from './email-notification.svg';
 export const gridOrderImage = (props) => (
   <div>
     <img
@@ -608,6 +608,9 @@ export const earningData = [
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
     pcColor: 'red',
+    backgroundimg: cardbg,
+    New: "5,203",
+    Returning: "Last Week",
   },
   {
     icon: <BsBoxSeam />,
@@ -617,6 +620,10 @@ export const earningData = [
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
     pcColor: 'green',
+    backgroundimg: cardbg,
+
+    New: "1,200",
+    Returning: "Last Month",
   },
   {
     icon: <FiBarChart />,
@@ -625,8 +632,11 @@ export const earningData = [
     title: 'Sales',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
-
+    
     pcColor: 'green',
+    backgroundimg: cardbg,
+    New: "3,000",
+    Returning: "Last Wednesday",
   },
   {
     icon: <HiOutlineRefresh />,
@@ -636,7 +646,11 @@ export const earningData = [
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
     pcColor: 'red',
+    backgroundimg: cardbg,
+    New: "1,000",
+    Returning: "Last Sunday",
   },
+
 ];
 
 export const recentTransactions = [

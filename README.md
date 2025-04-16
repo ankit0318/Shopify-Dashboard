@@ -23,12 +23,22 @@
 | Pie Charts | Color Picker | eCommerce |
 | Financial Charts |  |  |
 | Color Mapping |  |  |
+| Pyramid Charts |  |  |
+| Stacked Charts |  |  |
 
-- 🌓 **Theme Support**: Toggle between light and dark modes
-- 📱 **Responsive**: Works on all devices - desktop, tablet, and mobile
-- 🎨 **Customizable**: Easily change themes and layouts
+- 🌓 **Enhanced Theme System**: Refined dark mode implementation with HTML class-based toggling
+- 🎛️ **Theme Settings Panel**: New dedicated ThemeSideBar component for theme customization
+- 📱 **Responsive Layout**: Improved responsive design with dynamic sidebar handling
+- 🎨 **Color Theming**: Dynamic color application throughout the UI
 - 🔍 **Search Functionality**: Quickly find what you need
 - 📈 **Real-time Data**: Simulated real-time data updates
+
+## 🖥️ Recent Updates
+
+- **Dark Mode Enhancement**: Improved dark mode implementation that now applies classes directly to the HTML element
+- **Theme Settings**: Added a floating settings button that toggles a comprehensive theme settings sidebar
+- **Layout Improvements**: Better responsive handling with conditional sidebar display
+- **UI Consistency**: Ensured consistent styling between light and dark themes
 
 ## 🖥️ Live Demo
 
@@ -37,11 +47,11 @@ Check out the live demo: [React Admin Dashboard Demo](https://your-demo-link-her
 ## 🛠️ Technologies Used
 
 - **React** - Frontend library
-- **Syncfusion Components** - UI component suite
 - **React Router** - Navigation
-- **Tailwind CSS** - Styling
+- **Tailwind CSS** - Styling with dark mode support
 - **React Icons** - Icon library
-- **Context API** - State management
+- **MUI Components** - For tooltips and UI enhancements
+- **Context API** - State management for theme and layout preferences
 
 ## 🚀 Getting Started
 
@@ -126,9 +136,9 @@ This project is [MIT](./LICENSE) licensed.
 
 **Your Name**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
+- GitHub: [@ankit0318](https://github.com/ankit0318)
+- LinkedIn: [Ankit Sharma](https://linkedin.com/in/yourprofile)
 
 ---
 
-<p align="center">Made with ❤️ in React</p>
+

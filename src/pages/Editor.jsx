@@ -9,9 +9,9 @@ import { Header } from '../components';
 import { EditorData } from '../data/dummy';
 
 const Editor = () => (
-  <div className="m-4 mb-14 p-2 md:p-10 bg-white rounded-3xl ">
+  <div className="m-4 mb-14 p-2 md:p-10 bg-white rounded-3xl dark:bg-secondary-dark-bg">
     <Header category="App" title="Editor" />
-    <RichTextEditorComponent>
+    <RichTextEditorComponent className='dark:bg-secondary-dark-bg *:focus:outline-none' >
       <EditorData />
       <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]} />
     </RichTextEditorComponent>

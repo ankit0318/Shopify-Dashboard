@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { BsChatLeft, BsChatLeftDots } from "react-icons/bs";
-import  chatimage from "../data/chatimage.png";
+import chat from '../data/email-notification.svg';
 export default function ChatDropdown() {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef();
@@ -16,13 +16,16 @@ export default function ChatDropdown() {
   }, []);
 
   return (
-    <div className="relative inline-block" ref={dropdownRef}>
+    <div className="relative inline-block z-[999]" ref={dropdownRef}>
       {/* Dropdown toggle button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative  hover:bg-light-gray dark:hover:bg-transparent  z-10 block p-2 text-gray-700  border border-transparent rounded-full dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
+        className="relative  hover:bg-light-gray dark:hover:bg-transparent  z-10 block p-1 text-gray-700  border border-transparent rounded-full dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
       >
-        <BsChatLeft className="w-5 h-5 text-gray-800 dark:text-white" />
+      <div className=" flex justify-center items-center ">
+      <img src={chat} width={30} height={30} className=" text-gray-800 mb-1 dark:text-white" />
+      </div>
+     
       </button>
 
       {/* Dropdown menu */}
@@ -84,7 +87,7 @@ export default function ChatDropdown() {
           </div>
           <a
             href="#"
-            className="block py-2 font-semibold text-lg text-center text-white bg-gray-800 dark:bg-gray-700 hover:underline"
+            className="block py-2 font-semibold text-lg text-center text-white bg-blue-400 dark:bg-primary-600 hover:underline"
           >
             See all messages
           </a>

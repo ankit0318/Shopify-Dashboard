@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="none" viewBox="0 0 128 128" id="email-notification">
+  <path stroke="#000" stroke-linecap="round" stroke-width="6" d="M73 33L64 33L45 33V33C34.5066 33 26 41.5066 26 52L26 76C26 86.4934 34.5066 95 45 95V95L64 95L83 95V95C93.4934 95 102 86.4934 102 76L102 61"></path>
+  <path stroke="#000" stroke-linecap="round" stroke-width="6" d="M41 50L58.8638 62.7032C61.6395 64.677 65.3605 64.677 68.1362 62.7032L74.75 58"></path>
+  <circle cx="91" cy="44" r="11" stroke="#000" stroke-width="6"></circle>
+</svg>
