@@ -280,7 +280,7 @@ function App() {
           {/* Sidebar */}
           {activeMenu && (
             <motion.div
-              className=" max-md:fixed rounded-3xl h-screen ml-3 mb-3 mt-3 bg-white dark:bg-secondary-dark-bg z-50 text-gray-700 dark:text-gray-200 theme-transition"
+              className=" max-md:fixed rounded-3xl h-screen ml-3 mb-3 mt-3 pb-5  dark:bg-secondary-dark-bg z-50 text-gray-700 dark:text-gray-200 theme-transition"
               initial={{ x: -250 }}
               animate={{ x: 0 }}
               exit={{ x: -250 }}
@@ -292,7 +292,7 @@ function App() {
 
           {/* Main Content Area */}
           <div
-            className={`dark:bg-main-dark-bg bg-main-bg p-3 max-md:mt-1
+            className={`dark:bg-main-dark-bg bg-main-bg p-3 max-md:mt-1 
              text-gray-800 dark:text-gray-200 theme-transition
               ${activeMenu ? "" : ""}`}
           >
@@ -306,7 +306,7 @@ function App() {
             </motion.div>
  
             {/* Routes */}
-            <div className=" mt-4 h-screen my-scroll">
+            <div className=" mt-4 h-screen my-scroll pb-24">
  <PerfectScrollbar  >
 
  <AnimatedRoutes />

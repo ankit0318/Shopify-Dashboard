@@ -28,7 +28,7 @@ const CartDropDown = () => {
 
       {/* Dropdown menu */}
       {isOpen && (
-        <div className="absolute md:right-0 -right-10  z-20 w-64 mt-2 overflow-hidden origin-top-right bg-white rounded-md shadow-md sm:w-80 dark:bg-gray-800 transition transform duration-100 scale-100">
+        <div className="absolute md:right-0 -right-10  z-20 w-64 mt-5 overflow-hidden origin-top-right bg-white rounded-md shadow-md sm:w-80 dark:bg-gray-800 transition transform duration-100 scale-100">
           <section className="bg-white  antialiased dark:bg-gray-900 ">
             <div className="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
               <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">

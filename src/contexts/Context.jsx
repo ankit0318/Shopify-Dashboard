@@ -15,7 +15,7 @@ const initialState = {
 export const ContextProvider = ({ children}) => {
  
  const screenSizeRef= useRef(undefined);
- 
+  const [isExpanded, setIsExpanded] = useState(false);
  const [currentColor, setCurrentColor] = useState('#1E90FF');
  const [currentMode, setCurrentMode] = useState('Light');
  const [themeSettings, setThemeSettings] = useState(false);
@@ -39,7 +39,7 @@ function handleClick(name) {
 
 
 
-  return <StateContext.Provider value={{setMode,setColor,setCurrentMode,currentColor,themeSettings,setThemeSettings,activeMenu,currentMode,setActiveMenu,isClicked,handleClick,screenSizeRef}}>{children}</StateContext.Provider>;
+  return <StateContext.Provider value={{setMode,isExpanded,setIsExpanded,setColor,setCurrentMode,currentColor,themeSettings,setThemeSettings,activeMenu,currentMode,setActiveMenu,isClicked,handleClick,screenSizeRef}}>{children}</StateContext.Provider>;
 };
 
 // Fix the naming - should use StateContext not stateProvider

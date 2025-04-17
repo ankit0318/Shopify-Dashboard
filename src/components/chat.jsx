@@ -30,7 +30,7 @@ export default function ChatDropdown() {
 
       {/* Dropdown menu */}
       {isOpen && (
-        <div className="absolute right-0 z-20 w-64 mt-2 overflow-hidden origin-top-right bg-white rounded-md shadow-lg sm:w-80 dark:bg-gray-800 transition transform duration-100 scale-100">
+        <div className="absolute right-0 z-20 w-64 mt-4 overflow-hidden origin-top-right bg-white rounded-md shadow-lg sm:w-80 dark:bg-gray-800 transition transform duration-100 scale-100">
           <div className="py-2">
             {[
               {

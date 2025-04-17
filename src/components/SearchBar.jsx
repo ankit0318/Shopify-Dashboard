@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useStateContext } from "../contexts/Context";
 
 const SearchBar = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const { isExpanded, setIsExpanded } = useStateContext();
   const [searchTerm, setSearchTerm] = useState("");
   const searchRef = useRef(null);
   const { currentColor } = useStateContext();
@@ -22,7 +22,7 @@ const SearchBar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [setIsExpanded]);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -50,7 +50,7 @@ const SearchBar = () => {
             onSubmit={handleSearch}
             className="flex items-center bg-white dark:bg-gray-800 rounded-full overflow-hidden shadow-md border border-gray-200 dark:border-gray-700"
             initial={{ width: "40px", opacity: 0 }}
-            animate={{ width: "300px", opacity: 1 }}
+            animate={{ width: "250px", opacity: 1 }}
             exit={{ width: "40px", opacity: 0 }}
             transition={{ type: "spring", stiffness: 500, damping: 30 }}
           >

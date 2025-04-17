@@ -87,7 +87,7 @@ const Ecommerce = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              $63,488.56
+              $63,488
             </motion.p>
             <motion.p
               className="text-sm text-gray-400 dark:text-gray-500 mt-1"
@@ -99,7 +99,7 @@ const Ecommerce = () => {
             </motion.p>
           </div>
           <motion.div
-            className="pr-4"
+            className="pr-4 sm:hidden lg:block"
             whileHover={{ scale: 1.1, rotate: 5 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
