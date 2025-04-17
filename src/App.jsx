@@ -291,7 +291,7 @@ function App() {
 
           {/* Main Content Area */}
           <div
-            className={`dark:bg-main-dark-bg bg-main-bg p-3
+            className={`dark:bg-main-dark-bg bg-main-bg 
             w-full text-gray-800 dark:text-gray-200 h-full theme-transition
               ${activeMenu ? "md:ml-64" : "flex-2"}`}
           >
