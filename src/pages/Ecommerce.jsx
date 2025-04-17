@@ -22,7 +22,7 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import { AiFillCaretRight } from "react-icons/ai";
 import { useStateContext } from "../contexts/Context";
 import { motion } from "framer-motion";
-
+import avatar from "../data/avatar6.png";
 const Ecommerce = () => {
   const { currentColor, currentMode } = useStateContext();
 
@@ -66,7 +66,14 @@ const Ecommerce = () => {
           y: -5,
           boxShadow: "0 15px 30px rgba(0, 0, 0, 0.15)",
         }}
+       
       >
+      <img 
+    src={avatar} 
+    alt="Background" 
+    className="absolute top-0 -right-4 sm:-right-8 md:hidden h-full object-cover z-0" 
+    // use md:-right-16 lg:-right-20 for larger screens
+  />
         {/* Decorative elements */}
         <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-primary opacity-10 rounded-full blur-xl"></div>
         <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-gradient-primary opacity-10 rounded-full blur-xl"></div>
@@ -162,7 +169,6 @@ const Ecommerce = () => {
           variants={itemVariants}
           custom={index}
           transition={{ delay: index * 0.05 }}
-          
         >
           <Card
             title={item.title}
@@ -178,7 +184,7 @@ const Ecommerce = () => {
           />
         </motion.div>
       ))}
-  {/* Quick Stats Section
+      {/* Quick Stats Section
   <motion.div
               className="grid grid-cols-4   col-start-2 col-end-6 gap-4 p-4 bg-gradient-to-r from-blue-100 to-blue-200 rounded-lg shadow-md"
               initial={{ opacity: 0, y: 20 }}
