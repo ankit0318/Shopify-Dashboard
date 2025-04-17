@@ -217,7 +217,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="flex relative bg-main-bg dark:text-white dark:bg-main-dark-bg theme-transition">
+      <div className="relative  bg-main-bg dark:text-white dark:bg-main-dark-bg theme-transition">
         {themeSettings ? (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -275,11 +275,11 @@ function App() {
         )}
 
         {/* Main Layout Container */}
-        <div className="flex relative w-full h-full ">
+        <div className={`grid relative ${activeMenu ? "grid-cols-[256px_1fr]" : "grid-cols-1fr"} mx-3`}>
           {/* Sidebar */}
           {activeMenu && (
             <motion.div
-              className="w-64 fixed sidebar rounded-3xl m-3  h-full bg-white dark:bg-secondary-dark-bg z-50 text-gray-700 dark:text-gray-200 theme-transition"
+              className=" max-md:fixed rounded-3xl mr-3 my-3 bg-white dark:bg-secondary-dark-bg z-50 text-gray-700 dark:text-gray-200 theme-transition"
               initial={{ x: -250 }}
               animate={{ x: 0 }}
               exit={{ x: -250 }}
@@ -292,11 +292,11 @@ function App() {
           {/* Main Content Area */}
           <div
             className={`dark:bg-main-dark-bg bg-main-bg 
-            w-full text-gray-800 dark:text-gray-200 h-full theme-transition
-              ${activeMenu ? "md:ml-64" : "flex-2"}`}
+             text-gray-800 dark:text-gray-200 h-full theme-transition
+              ${activeMenu ? "" : "flex-2"}`}
           >
             <motion.div
-              className="fixed md:static bg-main-bg dark:bg-main-dark-bg w-full theme-transition"
+              className=" md:static bg-main-bg dark:bg-main-dark-bg  theme-transition  mt-4"
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.3 }}
@@ -305,7 +305,7 @@ function App() {
             </motion.div>
 
             {/* Routes */}
-            <div className=" h-full w-full mt-24 md:mt-4 ">
+            <div className=" h-full mt-4 ">
               <AnimatedRoutes />
             </div>
           </div>

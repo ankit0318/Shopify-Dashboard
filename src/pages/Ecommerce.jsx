@@ -50,7 +50,7 @@ const Ecommerce = () => {
 
   return (
     <motion.div
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[auto_1fr_1fr_1fr_1fr] px-4 md:px-9 gap-4 md:gap-5"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[auto_1fr_1fr_1fr_1fr]  gap-4 md:gap-5"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

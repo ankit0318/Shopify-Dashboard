@@ -95,7 +95,7 @@ const NavBar = () => {
 
   return (
     <motion.div
-      className="flex justify-between items-center rounded-full  mx-7 mt-4 px-4 py-2 h-16 theme-transition bg-white dark:bg-secondary-dark-bg shadow-sm"
+      className="flex justify-between items-center rounded-full   px-4 py-2 h-16 theme-transition bg-white dark:bg-secondary-dark-bg shadow-sm"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
