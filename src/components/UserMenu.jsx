@@ -98,14 +98,14 @@ const UserMenu = () => {
       {/* Dropdown toggle button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative z-10 h-14 mt-[4px] -mr-2 flex items-center gap-2  text-sm text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700 focus:outline-none"
+        className="relative z-10 h-14 mt-[4px] -mr-2 flex items-center justify-center  text-sm text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700 focus:outline-none"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         <img
           src={avatar}
           alt="user-profile"
-          className="rounded-full w-14 h-14 object-cover border-2 border-white dark:border-gray-700 shadow-sm"
+          className="rounded-full max-md:w-10 max-md:h-10   w-14 h-14 object-cover border-2 border-white dark:border-gray-700 shadow-sm"
         />
         <div className="flex flex-col items-start">
 
@@ -120,7 +120,7 @@ const UserMenu = () => {
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          <MdKeyboardArrowDown className="text-gray-500 dark:text-gray-400" />
+          <MdKeyboardArrowDown className="text-gray-500 dark:text-gray-400 max-md:hidden" />
         </motion.div>
       </motion.button>
 

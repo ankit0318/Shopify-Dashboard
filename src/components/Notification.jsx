@@ -22,7 +22,7 @@ export default function NotificationDropdown() {
         className="relative  hover:bg-light-gray dark:hover:bg-transparent  z-10 block p-2 text-gray-700  border border-transparent rounded-full dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
       >
         <img
-          className="w-5 h-5 text-gray-800 dark:text-white"
+          className="w-5 h-5  text-gray-800 dark:text-white"
          src={notification}
         >
          
@@ -69,7 +69,7 @@ export default function NotificationDropdown() {
                 className="flex items-center px-4 py-3 -mx-2 transition-colors duration-300 transform border-b border-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 dark:border-gray-700"
               >
                 <img
-                  className="flex-shrink-0 object-cover w-8 h-8 mx-1 rounded-full"
+                  className="flex-shrink-0 object-cover  w-8 h-8 mx-1 rounded-full"
                   src={notif.img}
                   alt="avatar"
                 />

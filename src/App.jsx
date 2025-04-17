@@ -5,6 +5,7 @@ import SideBar from "./components/SideBar.jsx";
 import { useStateContext } from "./contexts/Context";
 import NavBar from "./components/NavBar.jsx";
 import { useEffect } from "react";
+import PerfectScrollbar from "react-perfect-scrollbar";
 import {
   Ecommerce,
   Orders,
@@ -217,7 +218,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="relative  bg-main-bg dark:text-white dark:bg-main-dark-bg theme-transition">
+      <div className="relative box-border bg-main-bg dark:text-white dark:bg-main-dark-bg theme-transition ">
         {themeSettings ? (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -275,11 +276,11 @@ function App() {
         )}
 
         {/* Main Layout Container */}
-        <div className={`grid relative ${activeMenu ? "grid-cols-[256px_1fr]" : "grid-cols-1fr"} mx-3`}>
+        <div className={`grid relative ${activeMenu ? "grid-cols-[auto_1fr]" : "grid-cols-1fr"} overflow-hidden h-screen`}>
           {/* Sidebar */}
           {activeMenu && (
             <motion.div
-              className=" max-md:fixed rounded-3xl mr-3 my-3 bg-white dark:bg-secondary-dark-bg z-50 text-gray-700 dark:text-gray-200 theme-transition"
+              className=" max-md:fixed rounded-3xl h-screen ml-3 mb-3 mt-3 bg-white dark:bg-secondary-dark-bg z-50 text-gray-700 dark:text-gray-200 theme-transition"
               initial={{ x: -250 }}
               animate={{ x: 0 }}
               exit={{ x: -250 }}
@@ -291,22 +292,27 @@ function App() {
 
           {/* Main Content Area */}
           <div
-            className={`dark:bg-main-dark-bg bg-main-bg 
-             text-gray-800 dark:text-gray-200 h-full theme-transition
-              ${activeMenu ? "" : "flex-2"}`}
+            className={`dark:bg-main-dark-bg bg-main-bg p-3 max-md:mt-1
+             text-gray-800 dark:text-gray-200 theme-transition
+              ${activeMenu ? "" : ""}`}
           >
             <motion.div
-              className=" md:static bg-main-bg dark:bg-main-dark-bg  theme-transition  mt-4"
+              className=" md:static bg-main-bg dark:bg-main-dark-bg  theme-transition  "
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.3 }}
             >
               <NavBar />
             </motion.div>
-
+ 
             {/* Routes */}
-            <div className=" h-full mt-4 ">
-              <AnimatedRoutes />
+            <div className=" mt-4 h-screen my-scroll">
+ <PerfectScrollbar  >
+
+ <AnimatedRoutes />
+           
+ </PerfectScrollbar> 
+             
             </div>
           </div>
         </div>

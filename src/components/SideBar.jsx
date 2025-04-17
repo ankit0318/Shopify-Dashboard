@@ -29,7 +29,7 @@ function SideBar() {
   };
 
   return (
-    <div className="flex flex-col pl-6 pt-5 pr-0  bg-white dark:bg-secondary-dark-bg h-full theme-transition shadow-lg rounded-3xl">
+    <div className="flex flex-col pl-6 pt-5 pr-2 z-50 bg-white dark:bg-secondary-dark-bg h-full theme-transition shadow-lg rounded-3xl">
       <div className="flex flex-row justify-between pr-3 items-center mb-6 gap-3 font-extrabold text-xl text-slate-900 tracking-tight dark:text-white">
         <NavLink
           to="/"

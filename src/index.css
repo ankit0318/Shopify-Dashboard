@@ -23,6 +23,14 @@ body {
   background-color: #f9fafb;
 }
 
+.my-scroll .ps__rail-x,
+.my-scroll .ps__rail-y,
+.my-scroll .ps__thumb-x,
+.my-scroll .ps__thumb-y {
+  background-color: transparent !important;
+}
+
+
 h1,
 h2,
 h3,

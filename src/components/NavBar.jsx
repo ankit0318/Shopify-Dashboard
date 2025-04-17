@@ -171,7 +171,7 @@ const NavBar = () => {
 
         <motion.div
           variants={itemVariants}
-          className="relative z-50"
+          className="relative z-40"
           style={{
             filter: `drop-shadow(0 0 2px ${currentColor}40)`,
           }}
@@ -181,7 +181,7 @@ const NavBar = () => {
 
         <motion.div
           variants={itemVariants}
-          className="relative z-50"
+          className="relative z-40"
           style={{
             filter: `drop-shadow(0 0 2px ${currentColor}40)`,
           }}
@@ -191,7 +191,7 @@ const NavBar = () => {
 
         <motion.div
           variants={itemVariants}
-          className="relative z-50"
+          className="relative z-40"
           style={{
             filter: `drop-shadow(0 0 2px ${currentColor}40)`,
           }}
@@ -203,7 +203,7 @@ const NavBar = () => {
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          className="relative z-50"
+          className="relative z-40"
         >
           <Tooltip title="Profile" placement="bottom" arrow>
             <div className="relative">

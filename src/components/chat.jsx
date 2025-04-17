@@ -23,7 +23,7 @@ export default function ChatDropdown() {
         className="relative  hover:bg-light-gray dark:hover:bg-transparent  z-10 block p-1 text-gray-700  border border-transparent rounded-full dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
       >
       <div className=" flex justify-center items-center ">
-      <img src={chat} width={30} height={30} className=" text-gray-800 mb-1 dark:text-white" />
+      <img src={chat} width={0} height={0} className=" text-gray-800 mb-1 w-7 h-7 dark:text-white" />
       </div>
      
       </button>
