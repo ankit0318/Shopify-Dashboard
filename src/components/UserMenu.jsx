@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import avatar from "../data/avatar5.png";
+import avatar from "../data/avatar5.webp";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { useStateContext } from "../contexts/Context";

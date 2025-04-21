@@ -5,7 +5,7 @@ import "react-perfect-scrollbar/dist/css/styles.css";
 import { useStateContext } from "../contexts/Context.jsx";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
-import avatar from "../data/avatar5.png";
+import avatar from "../data/avatar5.webp";
 function SideBar() {
   const { activeMenu, setActiveMenu, currentColor } = useStateContext();
   const activeLink = `text-white font-medium`;
