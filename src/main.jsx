@@ -8,7 +8,7 @@ import { ContextProvider } from './contexts/Context.jsx';
 // Register Syncfusion license key
 // Replace 'YOUR_SYNCFUSION_LICENSE_KEY' with your actual license key
 
-registerLicense(import.meta.env.VITE_REACT_APP_SYNCFUSION_LICENSE);
+registerLicense(import.meta.env.VITE_SYNCFUSION_LICENSE_KEY);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <ContextProvider>
