@@ -40,11 +40,7 @@
 - **Layout Improvements**: Better responsive handling with conditional sidebar display
 - **UI Consistency**: Ensured consistent styling between light and dark themes
 
-## 🖥️ Live Demo
 
-<p align="center">
- <a href="https://shopify021.netlify.app/">Live Demo<a/>
-</p>
 
 ## 🛠️ Technologies Used
 
