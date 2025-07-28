@@ -42,7 +42,7 @@
 
 ## 🖥️ Live Demo
 
-Check out the live demo: [React Admin Dashboard Demo](https://shopify021.netlify.app/)
+Check out the live demo: https://shopify021.netlify.app/
 
 ## 🛠️ Technologies Used
 
