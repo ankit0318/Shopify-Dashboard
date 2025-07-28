@@ -42,7 +42,9 @@
 
 ## 🖥️ Live Demo
 
-Check out the live demo: https://shopify021.netlify.app/
+<p align="center">
+ <a href="https://shopify021.netlify.app/">Live Demo<a/>
+</p>
 
 ## 🛠️ Technologies Used
 
